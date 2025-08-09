@@ -1,6 +1,6 @@
-## Pest Disease Deteciton 
+## Pest Disease Detection 
 
-This project is a mobile application designed to assist users in identifying and managing plant diseases and pests. The app utilizes an AI-powered image recognition model to analyze pictures of damaged plants and provide users with instant, accurate diagnoses.
+Pest Disease Detection is a generated AI-based mobile application designed to assist users in identifying and managing plant diseases and pests. The app utilizes an AI-powered image recognition model to analyze pictures of damaged plants and provide users with instant, accurate diagnoses.
 
 The backend is built with Laravel, which serves as the API for the mobile app and powers a dedicated admin panel. The admin panel allows for the management of diseases, their descriptions, and corresponding prevention methods.
 
