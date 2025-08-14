@@ -22,12 +22,12 @@ class DiseaseApiController extends Controller
     public function uploadImage(Request $request)
     {
         $request->validate([
-            'image' => 'nullable|image|mimes:png,jpg,jpeg,svg,gif|max:2048',
+            'file' => 'nullable|image|mimes:png,jpg,jpeg,svg,gif|max:2048',
         ]);
 
         $imagePath = null;
-        if ($request->hasimage('image')) {
-            $imagePath = $request->image('image')->store('plant_disease_images', 'public');
+        if ($request->hasfile('file')) {
+            $imagePath = $request->file('file')->store('plant_disease_images', 'public');
         }
 
         return response()->json([

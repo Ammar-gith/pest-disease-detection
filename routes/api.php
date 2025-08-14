@@ -35,8 +35,9 @@ Route::middleware('auth:sanctum')->group(function () {
 // Home Screen Images
 Route::get('/home-screen-images', [HomeScreenImageApiController::class, 'index']);
 
-// Plant Disease API
+// Plant Disease API for field officer survey
 Route::get('/plant-diseases', [DiseaseApiController::class, 'index']);
+Route::post('/plant-disease/upload', [DiseaseApiController::class, 'uploadImage'])->name('plant_diaries.upload');
 Route::post('/plant-disease', [DiseaseApiController::class, 'store']);
 Route::get('/plant-disease/{id}/edit', [DiseaseApiController::class, 'edit']);
 Route::put('/plant-disease/{id}', [DiseaseApiController::class, 'update']);

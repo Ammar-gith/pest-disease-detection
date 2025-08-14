@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/home-screen-image/create', [HomeScreenImageController::class, 'create'])->name('home_screen_images.create');
     Route::post('/admin/home-screen-image/upload', [HomeScreenImageController::class, 'uploadImage'])->name('home_screen_images.upload');
     Route::post('/admin/home-screen-image', [HomeScreenImageController::class, 'store'])->name('home_screen_images.store');
+    Route::get('/admin/home-screen-image/{id}/show', [HomeScreenImageController::class, 'show'])->name('home_screen_images.show');
     Route::get('/admin/home-screen-image/{id}', [HomeScreenImageController::class, 'destroy'])->name('home_screen_images.delete');
 
 

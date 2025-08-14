@@ -76,7 +76,7 @@
                                         <tr>
                                             <td>{{ ++$key }}</td>
                                             <td>{{ $homeImage->image_title }}</td>
-                                            <td>{{ $homeImage->image_sub_title }}</td>
+                                            <td>{{ Str::limit($homeImage->image_sub_title, 40) }}</td>
                                             <td>
                                                 <div class="text-center">
                                                     <img src="{{ asset('storage/' . $homeImage->image) }}" alt="Plant Image"
@@ -85,7 +85,8 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href="" class="btn btn-secondary"><i class="fa fa-edit"></i></a>
+                                                <a href="{{ route('home_screen_images.show', $homeImage->id) }}"
+                                                    class="btn btn-info"><i class="fa fa-eye"></i></a>
                                                 <a href="{{ route('home_screen_images.delete', $homeImage->id) }}"
                                                     class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                             </td>

@@ -56,6 +56,14 @@ class HomeScreenImageController extends Controller
     }
 
 
+    public function show($id)
+    {
+        $homeImage = HomeScreenImage::findOrFail($id);
+
+        return view('admin.home_screen_images.show', compact('homeImage'));
+    }
+
+
     public function destroy($id)
     {
         $homeImage = HomeScreenImage::findOrFail($id);
